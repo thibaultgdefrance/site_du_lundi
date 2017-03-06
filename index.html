@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>site_du_lundi</title>
+        <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="/js/site_du_lundi.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
@@ -35,7 +36,11 @@
                 <h1 class="titre">Le site du lundi</h1>
             </div>
         </div>
+        <div class="blanc">
+        </div>
         <div class="container-fluid corps">
+
+
             <div class="col-md-10 col-md-offset-1" id="photo">
 
             </div>
@@ -46,102 +51,71 @@
 
             </div>
         </div>
-        <div class="" id="triangle1">
-        </div>
-        <div class="" id="triangle2">
+        <form>
 
-        </div>
-        <div class="" id="triangle2">
+            <label for="pseudo">Pseudonyme</label> <input type="text" id="pseudo" class="champ" /><br /><br />
 
-        </div>
-        <div class="" id="triangle2">
+            <label for="mdp">Mot de passe</label> <input type="password" id="mdp" class="champ" /><br /><br />
 
-        </div>
-        <div class="" id="triangle2">
+            <label for="confirmation">Confirmation</label>  <input type="password" id="confirmation" class="champ" /><br /><br />
 
-        </div>
-        <div class="" id="triangle2">
+            <label for="mail">E-mail</label> <input type="text" id="mail" class="champ" /><br /><br />
 
-        </div>
-        <div class="" id="triangle2">
+            <input type="submit" id="envoi" value="Envoyer" /> <input type="reset" id="rafraichir" value="Rafraîchir" />
 
-        </div>
-        <div class="" id="triangle2">
+        </form>
 
-        </div>
-        <div class="" id="triangle2">
+        <script type="text/javascript">
+        jquery(document).ready(function(){
+            var $pseudo = $('#pseudo'),
 
-        </div>
-        <div class="" id="triangle2">
+            $mdp = $('#mdp'),
 
-        </div>
-        <div class="" id="triangle2">
+            $confirmation = $('#confirmation'),
 
-        </div>
-        <div class="" id="triangle2">
+            $mail = $('#mail'),
 
-        </div>
-        <div class="" id="triangle2">
+            $envoi = $('#envoi'),
 
-        </div>
-        <div class="" id="triangle2">
+            $reset = $('#rafraichir'),
 
-        </div>
-        <div class="" id="triangle2">
+            $erreur = $('#erreur'),
 
-        </div>
-        <div class="" id="triangle2">
+            $champ = $('.champ');
 
-        </div>
-        <div class="" id="triangle2">
 
-        </div>
-        <div class="" id="triangle2">
+        });
+        $champ.keyup(function(){
 
-        </div>
-        <div class="" id="triangle2">
+        if($(this).val().length < 5){ // si la chaîne de caractères est inférieure à 5
 
-        </div>
-        <div class="" id="triangle2">
+            $(this).css({ // on rend le champ rouge
 
-        </div>
-        <div class="" id="triangle2">
+                borderColor : 'red',
 
-        </div>
-        <div class="" id="triangle2">
+            color : 'red'
 
-        </div>
-        <div class="" id="triangle2">
+            });
 
-        </div>
-        <div class="" id="triangle2">
+         }
 
-        </div>
-        <div class="" id="triangle2">
+         else{
 
-        </div>
-        <div class="" id="triangle2">
+             $(this).css({ // si tout est bon, on le rend vert
 
-        </div>
-        <div class="" id="triangle2">
+             borderColor : 'green',
 
-        </div>
-        <div class="" id="triangle2">
+             color : 'green'
 
-        </div>
+         });
 
-        <div class="" id="triangle2">
+         }
 
-        </div>
-        <div class="" id="triangle2">
+    });
 
-        </div>
-        <div class="" id="triangle2">
 
-        </div>
-        <div class="" id="triangle2">
 
-        </div>
+        </script>
 
     </body>
 </html>
