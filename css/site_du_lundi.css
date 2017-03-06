@@ -1,6 +1,10 @@
+.menu {
+  background-color: white; }
+
 .boutton {
   font-family: "Tangerine", cursive;
-  font-size: 30px; }
+  font-size: 30px;
+  text-align: center; }
 
 #titre {
   padding-top: 100px; }
@@ -16,6 +20,11 @@
   100% {
     height: 0%;
     width: 0%; } }
+@keyframes droite {
+  0% {
+    width: 100% auto; }
+  100% {
+    width: 0%; } }
 .blanc {
   height: 100%;
   width: 100%;
@@ -26,6 +35,15 @@
   animation-name: diminuer;
   animation-duration: 2s;
   animation-fill-mode: both; }
+
+.blanc2 {
+  background-color: white;
+  animation-name: droite;
+  animation-duration: 8s;
+  position: fixed;
+  height: 50px;
+  animation-fill-mode: both;
+  right: 0px; }
 
 .corps {
   border: solid black 1px;
